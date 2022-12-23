@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply bg-mothora-primary hover:bg-mothora-hover text-black font-semibold py-3 px-5 rounded-md transition-colors;
+  }
+
+  .btn-blue {
+    @apply bg-sky-600 hover:bg-sky-700 border-2 border-sky-700 hover:border-sky-800 text-white font-semibold py-2 px-4 rounded-md transition-colors disabled:cursor-not-allowed;
+  }
+
+  .btn-discord {
+    @apply bg-[#7289da] hover:bg-[#869ef5] p-4 text-white w-56 h-14;
+  }
+
+  .btn-icon {
+    @apply cursor-pointer hover:scale-105 transition-transform;
+  }
+
+  .btn-black {
+    @apply bg-black;
+  }
+
+  .btn-neutral {
+    @apply bg-gray-800 hover:bg-slate-700 text-white rounded-md py-0 font-normal;
+  }
+
+  .btn-danger {
+    @apply bg-red-500 hover:bg-red-600 text-white;
+  }
+
+  .btn-warning {
+    @apply bg-yellow-600 hover:bg-yellow-700 text-white;
+  }
+
+  h1 {
+    @apply text-white text-4xl py-4;
+  }
+
+  h2 {
+    @apply text-white text-2xl py-4;
+  }
+
+  h3 {
+    @apply text-white text-xl py-4;
+  }
+
+  a {
+    @apply cursor-pointer hover:underline text-sky-400 font-[proto-mono-regular];
+  }
+
+  p {
+    @apply text-lg;
+  }
+
+  .absolute-center {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #888;
+  background: var(--darkGrey-color);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  background: rgb(55 65 81);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
