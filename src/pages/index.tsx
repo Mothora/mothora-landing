@@ -16,6 +16,7 @@ export default function Home() {
       <Header />
       <main className="text-white">
         <HeroSection />
+        <WelcomeSection />
         <DAOSection />
       </main>
     </>
@@ -26,7 +27,16 @@ const HeroSection = () => {
   return (
     <div
       className="h-screen w-full bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/images/cdys-art-4.png')" }}
+      style={{
+        backgroundImage: `
+          -webkit-linear-gradient(top, 
+          rgba(0,0,0,0.1) 0%, 
+          rgba(0,0,0,0.2) 20%,
+          rgba(0,0,0,0.7) 80%,
+          rgba(0,0,0,0.9) 100%
+          ),
+          url("/images/cdys-art-4.png")`,
+      }}
     >
       <div className="flex h-full flex-col items-center justify-center">
         <h1 className="text-shadow text-slate-200 animate-in fade-in slide-in-from-top-10 duration-700">
@@ -53,6 +63,45 @@ const HeroSection = () => {
             <BsChevronDown />
           </div>
         </div>
+      </div>
+    </div>
+  );
+};
+
+const WelcomeSection = () => {
+  return (
+    <div
+      className="h-96 w-full bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `
+          -webkit-linear-gradient(top, 
+          rgba(0,0,0,0.9) 0%, 
+          rgba(0,0,0,0.5) 20%,
+          rgba(0,0,0,0) 50%,
+          rgba(0,0,0,0) 80%,
+          rgba(0,0,0,0.4) 100%
+          ),
+          url("/images/cdys-walls.png")`,
+      }}
+    >
+      <div className="flex items-center justify-between px-14">
+        <div>
+          <h2>Welcome to Mothora</h2>
+          <p className="max-w-xl">
+            Mothora is a Grand Strategy First-Person Shooter web3 game, where
+            players can socialize and immerse themselves in a dystopian sci-fi
+            future. Players can join DAOs, or Decentralized Autonomous
+            Organizations, to govern themselves and the outcome of the game.
+          </p>
+        </div>
+
+        <Image
+          src="/images/dalle8.png"
+          alt="Mothora Example"
+          className="rounded-md"
+          width={300}
+          height={300}
+        />
       </div>
     </div>
   );
@@ -117,9 +166,9 @@ const SlideTransitionButton = ({
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M14 5l7 7m0 0l-7 7m7-7H3"
             ></path>
           </svg>
