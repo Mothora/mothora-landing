@@ -56,13 +56,14 @@ const HeroSection = () => {
           />
         </div>
         {/* Scroll Indicator */}
-        <div className="absolute inset-x-0 bottom-6 mx-auto transition-transform animate-in fade-in slide-in-from-bottom-10 duration-500 hover:translate-y-5">
-          <div className="mx-auto flex flex-col items-center">
-            <p className="text-shadow cursor-default text-2xl font-bold">
-              Scroll
-            </p>
+        <div className="absolute inset-x-0 bottom-6 mx-auto transition-transform animate-in fade-in slide-in-from-bottom-10 duration-500 hover:translate-y-2">
+          <a
+            className="mx-auto flex cursor-pointer flex-col items-center"
+            href="#welcome"
+          >
+            <p className="text-shadow text-2xl font-bold">Scroll</p>
             <BsChevronDown />
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -72,7 +73,8 @@ const HeroSection = () => {
 const WelcomeSection = () => {
   return (
     <div
-      className="h-96 w-full bg-cover bg-center bg-no-repeat"
+      className="h-96 w-full scroll-m-24 bg-cover bg-center bg-no-repeat "
+      id="welcome"
       style={{
         backgroundImage: `
           -webkit-linear-gradient(top, 
