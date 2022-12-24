@@ -27,8 +27,8 @@
     @apply cursor-pointer transition-transform hover:scale-105;
   }
 
-  .btn-black {
-    @apply bg-black;
+  .btn-secondary {
+    @apply border border-solid border-mothora-secondary bg-mothora-secondary text-mothora-primary hover:border-mothora-secondary hover:text-mothora-secondary;
   }
 
   .btn-neutral {

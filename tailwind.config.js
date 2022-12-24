@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         "mothora-primary": "#E6C171",
         "mothora-hover": "#F2D18A",
+        "mothora-secondary": "#0f2d2d",
       },
     },
     screens: {
@@ -28,5 +29,8 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwindcss-animation-delay"),
+  ],
 };
