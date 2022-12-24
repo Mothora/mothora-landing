@@ -14,6 +14,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
       <main className="text-white">
         <div
           className="h-screen w-full bg-cover bg-center bg-no-repeat"
@@ -66,10 +67,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        <Header />
-
-        <div className="absolute top-24 right-0 w-full"></div>
       </main>
     </>
   );

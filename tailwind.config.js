@@ -29,8 +29,5 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    require("tailwindcss-animation-delay"),
-  ],
+  plugins: [require("tailwindcss-animate")],
 };
