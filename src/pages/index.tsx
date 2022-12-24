@@ -16,36 +16,7 @@ export default function Home() {
       <Header />
       <main className="text-white">
         <HeroSection />
-        <div className="flex flex-col items-center">
-          <div
-            className="h-40 w-full bg-cover bg-center object-cover"
-            style={{
-              backgroundImage: "url('/images/daos/dao-banner.jpeg')",
-            }}
-          />
-          <h2 className="text-shadow text-center text-3xl">Meet the DAOs</h2>
-          <p className="max-w-3xl pb-8 text-center">
-            DAOs allow for groups of like-minded players to govern themselves.
-            These organizations of people can make proposals that influence how
-            the game is meant to be played by them, their strategies and how
-            they are managed.
-          </p>
-
-          <Image
-            src="/images/map.png"
-            alt="Map"
-            width={500}
-            height={500}
-            className="mb-8"
-          ></Image>
-
-          <SlideTransitionButton
-            text="Meet the DAOs"
-            secondaryText="Meet the DAOs"
-            link="/daos"
-            type="link"
-          />
-        </div>
+        <DAOSection />
       </main>
     </>
   );
@@ -83,6 +54,41 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+    </div>
+  );
+};
+
+const DAOSection = () => {
+  return (
+    <div className="flex flex-col items-center">
+      <div
+        className="h-40 w-full bg-cover bg-center object-cover"
+        style={{
+          backgroundImage: "url('/images/daos/dao-banner.jpeg')",
+        }}
+      />
+      <h2 className="text-shadow text-center text-3xl">Meet the DAOs</h2>
+      <p className="max-w-3xl pb-8 text-center">
+        DAOs allow for groups of like-minded players to govern themselves. These
+        organizations of people can make proposals that influence how the game
+        is meant to be played by them, their strategies and how they are
+        managed.
+      </p>
+
+      <Image
+        src="/images/map.png"
+        alt="Map"
+        width={500}
+        height={500}
+        className="mb-8"
+      ></Image>
+
+      <SlideTransitionButton
+        text="Meet the DAOs"
+        secondaryText="Meet the DAOs"
+        link="/daos"
+        type="link"
+      />
     </div>
   );
 };
@@ -125,18 +131,14 @@ const SlideTransitionButton = ({
       </>
     );
   };
+  const classNames =
+    "group relative my-4 inline-flex w-64 items-center justify-center overflow-hidden rounded-md border-2 border-black bg-mothora-primary px-6 py-3 text-white shadow-md transition animate-in fade-in slide-in-from-bottom-10 duration-700 ease-out";
   return type === "a" ? (
-    <a
-      href={link}
-      className="group relative inline-flex w-64 items-center justify-center overflow-hidden rounded-md border-2 border-black bg-mothora-primary p-4 px-6 py-3 text-white shadow-md transition animate-in fade-in slide-in-from-bottom-10 duration-700 ease-out"
-    >
+    <a href={link} className={classNames}>
       <InnerContent />
     </a>
   ) : (
-    <Link
-      href={link}
-      className="group relative inline-flex w-64 items-center justify-center overflow-hidden rounded-md border-2 border-black bg-mothora-primary p-4 px-6 py-3 text-white shadow-md transition animate-in fade-in slide-in-from-bottom-10 duration-700 ease-out"
-    >
+    <Link href={link} className={classNames}>
       <InnerContent />
     </Link>
   );
