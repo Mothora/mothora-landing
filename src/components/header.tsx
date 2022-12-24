@@ -34,17 +34,32 @@ export default function Header() {
         </div>
 
         <div className="flex h-full items-center gap-2 animate-in fade-in slide-in-from-right-10 duration-700">
-          <a href="https://aydens.us" className="btn-header-social">
+          <a
+            href="https://discord.gg/KxR6GzZWkK"
+            target={"_blank"}
+            rel="noreferrer"
+            className="btn-header-social"
+          >
             <span>
               <SiDiscord size={24} />
             </span>
           </a>
-          <a href="https://aydens.us" className="btn-header-social">
+          <a
+            href="https://twitter.com/mothora_"
+            target={"_blank"}
+            rel="noreferrer"
+            className="btn-header-social"
+          >
             <span>
               <BsTwitter size={24} />
             </span>
           </a>
-          <a href="https://aydens.us" className="btn-header-social">
+          <a
+            href="https://www.instagram.com/mothoragame/"
+            target={"_blank"}
+            rel="noreferrer"
+            className="btn-header-social"
+          >
             <span>
               <BsInstagram size={24} />
             </span>
