@@ -17,6 +17,7 @@ export default function Home() {
       <main className="text-white">
         <HeroSection />
         <WelcomeSection />
+        <EssenceSection />
         <DAOSection />
       </main>
     </>
@@ -50,7 +51,7 @@ const HeroSection = () => {
           <SlideTransitionButton
             text="Enter the World"
             secondaryText="Join Now!"
-            link="app.mothora.xyz"
+            link="https://app.mothora.xyz"
             type="a"
           />
         </div>
@@ -88,11 +89,24 @@ const WelcomeSection = () => {
         <div>
           <h2>Welcome to Mothora</h2>
           <p className="max-w-xl">
-            Mothora is a Grand Strategy First-Person Shooter web3 game, where
-            players can socialize and immerse themselves in a dystopian sci-fi
-            future. Players can join DAOs, or Decentralized Autonomous
-            Organizations, to govern themselves and the outcome of the game.
+            Join the fight for dominance in Mothora, the epic Grand Strategy
+            First-Person Shooter Web3 game set in a dystopian sci-fi future.
+            Mothora is a Grand Strategy First-Person Shooter web3 game, players
+            can join DAOs to govern themselves and the outcome of the game.
           </p>
+          <div className="flex gap-4 pt-4">
+            <a className="btn w-56 text-center" href="https://app.mothora.xyz">
+              Enter the World Now
+            </a>
+            <a
+              className="btn w-56 text-center"
+              href="https://mothora.gitbook.io/mothora/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Read More
+            </a>
+          </div>
         </div>
 
         <Image
@@ -107,15 +121,53 @@ const WelcomeSection = () => {
   );
 };
 
+const EssenceSection = () => {
+  return (
+    <div
+      className="h-full w-full bg-cover bg-center bg-no-repeat pb-8"
+      style={{
+        backgroundImage: `
+          -webkit-linear-gradient(top, 
+          rgba(0,0,0,0.9) 0%, 
+          rgba(0,0,0,0.5) 20%,
+          rgba(0,0,0,0.4) 50%,
+          rgba(0,0,0,0.4) 80%,
+          rgba(0,0,0,0.7) 100%
+          ),
+          url("/images/cdys-essence-2.png")`,
+      }}
+    >
+      <div className="flex flex-col items-center gap-4">
+        <h2 className="essence text-center text-8xl">$ESSENCE</h2>
+        <p className="max-w-3xl text-center font-bold">
+          <span className="text-shadow">
+            Earn and craft unique, soulbound non-fungible tokens (NFTs) as you
+            earn{" "}
+          </span>
+          <span className="essence font-extrabold">$ESSENCE </span>
+          <span className="text-shadow">
+            and rise to the top of your DAO's governance ranks.
+          </span>
+        </p>
+        <h2 className="text-shadow text-center text-6xl font-bold">SRep</h2>
+        <p className="text-shadow max-w-3xl text-center">
+          SRep represents the shares of ownership a player has on their DAO
+          during a season. It is obtained by locking $ESSENCE or NFTs.
+        </p>
+        <a
+          className="btn text-center"
+          href="https://mothora.gitbook.io/mothora/fundamentals/economic-loops"
+        >
+          Learn more about the Economy Loop
+        </a>
+      </div>
+    </div>
+  );
+};
+
 const DAOSection = () => {
   return (
     <div className="flex flex-col items-center">
-      <div
-        className="h-40 w-full bg-cover bg-center object-cover"
-        style={{
-          backgroundImage: "url('/images/daos/dao-banner.jpeg')",
-        }}
-      />
       <h2 className="text-shadow text-center text-3xl">Meet the DAOs</h2>
       <p className="max-w-3xl pb-8 text-center">
         DAOs allow for groups of like-minded players to govern themselves. These
@@ -123,7 +175,12 @@ const DAOSection = () => {
         is meant to be played by them, their strategies and how they are
         managed.
       </p>
-
+      <div
+        className="mb-8 h-40 w-full bg-cover bg-center object-cover"
+        style={{
+          backgroundImage: "url('/images/daos/dao-banner.jpeg')",
+        }}
+      />
       <Image
         src="/images/map.png"
         alt="Map"
@@ -131,6 +188,11 @@ const DAOSection = () => {
         height={500}
         className="mb-8"
       ></Image>
+
+      <p className="max-w-2xl text-center">
+        Become a member of a Decentralized Autonomous Organization (DAO) and
+        strategize your way to victory in Mothora's immersive and intense world.
+      </p>
 
       <SlideTransitionButton
         text="Meet the DAOs"

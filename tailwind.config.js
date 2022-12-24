@@ -9,7 +9,13 @@ module.exports = {
       colors: {
         "mothora-primary": "#E6C171",
         "mothora-hover": "#F2D18A",
-        "mothora-secondary": "#0f2d2d",
+        // "mothora-secondary": "#0f2d2d",
+        "mothora-sky-2": "#608982ff",
+        // "mothora-primary": "#FDC485ff",
+        // "mothora-hover": "#FFCA8Aff",
+        "mothora-dark": "3D1F1Fff",
+        "mothora-sky": "#A0D6C2ff",
+        "mothora-secondary": "#885944ff",
       },
     },
     screens: {
@@ -27,6 +33,21 @@ module.exports = {
 
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
+    },
+    animation: {
+      text: "text 5s ease infinite",
+    },
+    keyframes: {
+      text: {
+        "0%, 100%": {
+          "background-size": "100% 100%",
+          "background-position": "left center",
+        },
+        "50%": {
+          "background-size": "200% 200%",
+          "background-position": "right center",
+        },
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -24,19 +24,21 @@ export default function Header() {
             <span>DAOs</span>
           </a>
 
-          <a
-            className="btn-header animate-in fade-in slide-in-from-left-14 duration-700"
-            href="https://mothora.gitbook.io/mothora/"
-          >
-            <span>Gitbook</span>
-          </a>
-
           <a className="btn-header animate-in fade-in slide-in-from-left-16 duration-700">
             <span>FAQ</span>
           </a>
 
           <a className="btn-header animate-in fade-in slide-in-from-left-24 duration-700">
-            <span>Support</span>
+            <span>Community</span>
+          </a>
+
+          <a
+            className="btn-header animate-in fade-in slide-in-from-left-14 duration-700"
+            href="https://mothora.gitbook.io/mothora/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>Read More</span>
           </a>
         </div>
 
