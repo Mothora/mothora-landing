@@ -6,9 +6,9 @@ import { BsInstagram } from "react-icons/bs";
 
 export default function Header() {
   return (
-    <div className="fixed top-0 right-0 z-10 h-20 w-full bg-black px-4 py-2 animate-in fade-in slide-in-from-top-10 duration-700">
-      <div className="flex h-full w-full items-center justify-between gap-2">
-        <div className="flex h-full w-full items-center gap-2">
+    <div className="fixed top-0 right-0 z-10 h-20 w-full bg-black bg-opacity-20 px-4 py-2 shadow-lg animate-in fade-in slide-in-from-top-10 duration-700">
+      <div className="flex h-full w-full items-center justify-between">
+        <div className="flex h-full w-full items-center gap-4">
           <Image
             src="/images/brand/mothora-full.png"
             className="cursor-pointer text-white duration-500 hover:scale-95"
@@ -19,27 +19,28 @@ export default function Header() {
               window.location.replace("https://mothora.xyz");
             }}
           />
+          <div className="flex gap-2">
+            <a className="btn btn-header animate-in fade-in slide-in-from-left-10 duration-300">
+              <span>DAOs</span>
+            </a>
 
-          <a className="btn-header animate-in fade-in slide-in-from-left-10 duration-700">
-            <span>DAOs</span>
-          </a>
+            <a className="btn btn-header animate-in fade-in slide-in-from-left-16 duration-300">
+              <span>FAQ</span>
+            </a>
 
-          <a className="btn-header animate-in fade-in slide-in-from-left-16 duration-700">
-            <span>FAQ</span>
-          </a>
+            <a className="btn btn-header animate-in fade-in slide-in-from-left-24 duration-300">
+              <span>Community</span>
+            </a>
 
-          <a className="btn-header animate-in fade-in slide-in-from-left-24 duration-700">
-            <span>Community</span>
-          </a>
-
-          <a
-            className="btn-header animate-in fade-in slide-in-from-left-14 duration-700"
-            href="https://mothora.gitbook.io/mothora/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span>Read More</span>
-          </a>
+            <a
+              className="btn btn-header animate-in fade-in slide-in-from-left-14 duration-300"
+              href="https://mothora.gitbook.io/mothora/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Read More</span>
+            </a>
+          </div>
         </div>
 
         <div className="flex h-full items-center gap-2 animate-in fade-in slide-in-from-right-10 duration-700">

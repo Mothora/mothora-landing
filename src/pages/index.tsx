@@ -3,6 +3,7 @@ import Header from "@components/header";
 import Link from "next/link";
 import { BsChevronDown } from "react-icons/bs";
 import Image from "next/image";
+import { RxDoubleArrowRight } from "react-icons/rx";
 
 export default function Home() {
   return (
@@ -17,8 +18,8 @@ export default function Home() {
       <main className="text-white">
         <HeroSection />
         <WelcomeSection />
-        <EssenceSection />
         <DAOSection />
+        <EssenceSection />
       </main>
     </>
   );
@@ -33,10 +34,10 @@ const HeroSection = () => {
           -webkit-linear-gradient(top, 
           rgba(0,0,0,0.1) 0%, 
           rgba(0,0,0,0.2) 20%,
-          rgba(0,0,0,0.7) 80%,
+          rgba(0,0,0,0.5) 80%,
           rgba(0,0,0,0.9) 100%
           ),
-          url("/images/cdys-art-4.png")`,
+          url("/images/top-mountain.jpeg")`,
       }}
     >
       <div className="flex h-full flex-col items-center justify-center">
@@ -73,7 +74,7 @@ const HeroSection = () => {
 const WelcomeSection = () => {
   return (
     <div
-      className="h-96 w-full scroll-m-24 bg-cover bg-center bg-no-repeat "
+      className="h-[550px] min-h-screen w-full bg-cover bg-center bg-no-repeat "
       id="welcome"
       style={{
         backgroundImage: `
@@ -81,13 +82,13 @@ const WelcomeSection = () => {
           rgba(0,0,0,0.9) 0%, 
           rgba(0,0,0,0.5) 20%,
           rgba(0,0,0,0) 50%,
-          rgba(0,0,0,0) 80%,
-          rgba(0,0,0,0.4) 100%
+          rgba(0,0,0,0.2) 80%,
+          rgba(0,0,0,0.9) 100%
           ),
           url("/images/cdys-walls.png")`,
       }}
     >
-      <div className="flex items-center justify-between px-14">
+      <div className="flex h-full items-center justify-between px-14 pb-16">
         <div>
           <h2>Welcome to Mothora</h2>
           <p className="max-w-xl">
@@ -110,58 +111,15 @@ const WelcomeSection = () => {
             </a>
           </div>
         </div>
-
-        <Image
-          src="/images/dalle8.png"
-          alt="Mothora Example"
-          className="rounded-md"
-          width={300}
-          height={300}
-        />
-      </div>
-    </div>
-  );
-};
-
-const EssenceSection = () => {
-  return (
-    <div
-      className="h-full w-full bg-cover bg-center bg-no-repeat pb-8"
-      style={{
-        backgroundImage: `
-          -webkit-linear-gradient(top, 
-          rgba(0,0,0,0.9) 0%, 
-          rgba(0,0,0,0.5) 20%,
-          rgba(0,0,0,0.4) 50%,
-          rgba(0,0,0,0.4) 80%,
-          rgba(0,0,0,0.7) 100%
-          ),
-          url("/images/cdys-essence-2.png")`,
-      }}
-    >
-      <div className="flex flex-col items-center gap-4">
-        <h2 className="essence text-center text-8xl">$ESSENCE</h2>
-        <p className="max-w-3xl text-center font-bold">
-          <span className="text-shadow">
-            Earn and craft unique, soulbound non-fungible tokens (NFTs) as you
-            earn{" "}
-          </span>
-          <span className="essence font-extrabold">$ESSENCE </span>
-          <span className="text-shadow">
-            and rise to the top of your DAO's governance ranks.
-          </span>
-        </p>
-        <h2 className="text-shadow text-center text-6xl font-bold">SRep</h2>
-        <p className="text-shadow max-w-3xl text-center">
-          SRep represents the shares of ownership a player has on their DAO
-          during a season. It is obtained by locking $ESSENCE or NFTs.
-        </p>
-        <a
-          className="btn text-center"
-          href="https://mothora.gitbook.io/mothora/fundamentals/economic-loops"
-        >
-          Learn more about the Economy Loop
-        </a>
+        <div className="pt-10">
+          <Image
+            src="/images/n1.png"
+            alt="Mothora Example"
+            className="rounded-md"
+            width={400}
+            height={400}
+          />
+        </div>
       </div>
     </div>
   );
@@ -169,27 +127,72 @@ const EssenceSection = () => {
 
 const DAOSection = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div
+      className="flex min-h-screen flex-col items-center justify-center"
+      style={{
+        backgroundImage: `
+          -webkit-linear-gradient(top, 
+          rgba(0,0,0,0.9) 0%, 
+          rgba(0,0,0,0.2) 20%,
+          rgba(0,0,0,0) 50%,
+          rgba(0,0,0,0) 80%,
+          rgba(0,0,0,0.2) 100%
+          ),
+          url("/images/cdys-walls.png")`,
+      }}
+    >
       <h2 className="text-shadow text-center text-3xl">Meet the DAOs</h2>
-      <p className="max-w-3xl pb-8 text-center">
+      <p className="max-w-3xl text-center">
         DAOs allow for groups of like-minded players to govern themselves. These
         organizations of people can make proposals that influence how the game
         is meant to be played by them, their strategies and how they are
         managed.
       </p>
-      <div
-        className="mb-8 h-40 w-full bg-cover bg-center object-cover"
-        style={{
-          backgroundImage: "url('/images/daos/dao-banner.jpeg')",
-        }}
-      />
-      <Image
-        src="/images/map.png"
-        alt="Map"
-        width={500}
-        height={500}
-        className="mb-8"
-      ></Image>
+
+      {/* Icons */}
+      <div className="my-6 flex shrink-0 items-center gap-6 rounded-lg bg-gray-700 bg-opacity-20 pl-4">
+        <a
+          href="https://mothora.gitbook.io/mothora/set-and-setting/the-daos/shadow-council"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image
+            src="/images/daos/sc_logo.png"
+            alt="Shadow Council"
+            width="160"
+            height="160"
+            className="cursor-pointer duration-300 hover:scale-110"
+          />
+        </a>
+
+        <a
+          href="https://mothora.gitbook.io/mothora/set-and-setting/the-daos/eclipse-horizon"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image
+            src="/images/daos/eh_logo.png"
+            alt="Iron Empire"
+            width="160"
+            height="160"
+            className="cursor-pointer duration-300 hover:scale-110"
+          />
+        </a>
+
+        <a
+          href="https://mothora.gitbook.io/mothora/set-and-setting/the-daos/the-federation"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image
+            src="/images/daos/fed_logo.png"
+            alt="The Federation"
+            width="160"
+            height="160"
+            className="cursor-pointer duration-300 hover:scale-110"
+          />
+        </a>
+      </div>
 
       <p className="max-w-2xl text-center">
         Become a member of a Decentralized Autonomous Organization (DAO) and
@@ -202,6 +205,64 @@ const DAOSection = () => {
         link="/daos"
         type="link"
       />
+    </div>
+  );
+};
+
+const EssenceSection = () => {
+  return (
+    <div
+      className="h-[700px] min-h-screen w-full bg-cover bg-center bg-no-repeat pb-8"
+      style={{
+        backgroundImage: `
+          -webkit-linear-gradient(top, 
+          rgba(0,0,0,0.7) 0%, 
+          rgba(0,0,0,0.5) 20%,
+          rgba(0,0,0,0.2) 50%,
+          rgba(0,0,0,0.3) 80%,
+          rgba(0,0,0,0.4) 100%
+          ),
+          url("/images/cdys-essence-2.png")`,
+      }}
+    >
+      <div className="flex h-full flex-col items-center justify-center gap-2">
+        <div className="mb-6 flex items-center gap-8 px-8">
+          <div className="w-[400px] rounded-xl bg-black bg-opacity-70 px-4 pb-4">
+            <h2 className="essence text-center text-6xl">ESSENCE</h2>
+            <p className="max-w-3xl text-center font-bold">
+              <span className="text-shadow">
+                Earn and craft unique, soulbound non-fungible tokens (NFTs) as
+                you earn{" "}
+              </span>
+              <span className="essence font-extrabold">$ESSENCE </span>
+              <span className="text-shadow">
+                and rise to the top of your DAO's governance ranks.
+              </span>
+            </p>
+          </div>
+
+          <RxDoubleArrowRight size={64} />
+
+          <div className="w-[400px] rounded-xl bg-black bg-opacity-70 px-4 pb-4">
+            <h2 className="text-shadow text-center text-6xl font-bold">SRep</h2>
+            <p className="max-w-3xl text-center font-bold">
+              <span className="text-shadow">
+                SRep represents the shares of ownership a player has on their
+                DAO during a season. It is obtained by locking{" "}
+              </span>
+              <span className="essence font-extrabold">$ESSENCE </span>
+              <span className="text-shadow">or NFTs.</span>
+            </p>
+          </div>
+        </div>
+
+        <a
+          className="btn text-center"
+          href="https://mothora.gitbook.io/mothora/fundamentals/economic-loops"
+        >
+          Learn more about the Economy Loop
+        </a>
+      </div>
     </div>
   );
 };

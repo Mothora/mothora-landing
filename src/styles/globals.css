@@ -8,11 +8,11 @@
   }
 
   .btn-header {
-    @apply rounded border border-solid border-mothora-primary py-2 px-4 font-semibold text-mothora-primary transition-colors duration-500 hover:bg-mothora-hover hover:text-black;
+    @apply h-10 py-2;
   }
 
   .btn-header-social {
-    @apply cursor-pointer border border-solid py-1 px-2 font-semibold text-white transition-colors duration-500 hover:bg-white hover:text-black;
+    @apply flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-opacity-10 py-1 px-2 font-semibold text-gray-200 transition-colors duration-500 hover:bg-gray-700 hover:bg-opacity-40;
   }
 
   .btn-blue {
@@ -111,6 +111,9 @@ a {
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  /* background very dark gray color */
+  /* darker than #888 */
+  background: rgb(35, 35, 35);
 }
 
 /* Track */
