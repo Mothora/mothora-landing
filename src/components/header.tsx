@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { SiDiscord } from "react-icons/si";
-import { BsTwitter } from "react-icons/bs";
+import { BsStack, BsTelegram, BsTwitter } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 
 export default function Header() {
@@ -72,6 +72,26 @@ export default function Header() {
           >
             <span>
               <BsInstagram size={24} />
+            </span>
+          </a>
+          <a
+            href="https://t.me/mothoragame"
+            target={"_blank"}
+            rel="noreferrer"
+            className="btn-header-social"
+          >
+            <span>
+              <BsTelegram size={24} />
+            </span>
+          </a>
+          <a
+            href="https://mothora.substack.com/_"
+            target={"_blank"}
+            rel="noreferrer"
+            className="btn-header-social"
+          >
+            <span>
+              <BsStack size={24} />
             </span>
           </a>
         </div>

@@ -51,9 +51,10 @@ const HeroSection = () => {
           {/* Enter the World button */}
           <SlideTransitionButton
             text="Enter the World"
-            secondaryText="Join Now!"
+            secondaryText="Be Immersed in the Future"
             link="https://app.mothora.xyz"
             type="a"
+            w="72"
           />
         </div>
         {/* Scroll Indicator */}
@@ -201,7 +202,7 @@ const DAOSection = () => {
 
       <SlideTransitionButton
         text="Meet the DAOs"
-        secondaryText="Meet the DAOs"
+        secondaryText="Meet your Future Allies"
         link="/daos"
         type="link"
       />
@@ -228,7 +229,7 @@ const EssenceSection = () => {
       <div className="flex h-full flex-col items-center justify-center gap-2">
         <div className="mb-6 flex items-center gap-8 px-8">
           <div className="w-[400px] rounded-xl bg-black bg-opacity-70 px-4 pb-4">
-            <h2 className="essence text-center text-6xl">ESSENCE</h2>
+            <h2 className="essence text-center text-4xl">ESSENCE</h2>
             <p className="max-w-3xl text-center font-bold">
               <span className="text-shadow">
                 Earn and craft unique, soulbound non-fungible tokens (NFTs) as
@@ -244,7 +245,7 @@ const EssenceSection = () => {
           <RxDoubleArrowRight size={64} />
 
           <div className="w-[400px] rounded-xl bg-black bg-opacity-70 px-4 pb-4">
-            <h2 className="text-shadow text-center text-6xl font-bold">SRep</h2>
+            <h2 className="text-shadow text-center text-4xl font-bold">SRep</h2>
             <p className="max-w-3xl text-center font-bold">
               <span className="text-shadow">
                 SRep represents the shares of ownership a player has on their
@@ -256,12 +257,13 @@ const EssenceSection = () => {
           </div>
         </div>
 
-        <a
-          className="btn text-center"
-          href="https://mothora.gitbook.io/mothora/fundamentals/economic-loops"
-        >
-          Learn more about the Economy Loop
-        </a>
+        <SlideTransitionButton
+          text="Learn more about the Economy Loop"
+          secondaryText="Become an Economy Expert"
+          link="https://mothora.gitbook.io/mothora/fundamentals/economic-loops"
+          type="a"
+          w="96"
+        />
       </div>
     </div>
   );
@@ -272,11 +274,13 @@ const SlideTransitionButton = ({
   secondaryText,
   link,
   type,
+  w = "64",
 }: {
   text: string;
   secondaryText: string;
   link: string;
   type: "a" | "link";
+  w?: string;
 }) => {
   const InnerContent = () => {
     return (
@@ -305,8 +309,8 @@ const SlideTransitionButton = ({
       </>
     );
   };
-  const classNames =
-    "group relative my-4 inline-flex w-64 items-center justify-center overflow-hidden rounded-md border-2 border-black bg-mothora-primary px-6 py-3 text-white shadow-md transition animate-in fade-in slide-in-from-bottom-10 duration-700 ease-out";
+
+  const classNames = `group relative my-4 inline-flex w-${w} items-center justify-center overflow-hidden rounded-lg bg-mothora-primary px-6 py-3 text-white shadow-md transition animate-in fade-in slide-in-from-bottom-10 duration-700 ease-out`;
   return type === "a" ? (
     <a href={link} className={classNames}>
       <InnerContent />
