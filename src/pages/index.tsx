@@ -14,13 +14,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <main className="text-white">
-        <HeroSection />
-        <WelcomeSection />
-        <DAOSection />
-        <EssenceSection />
-      </main>
+
+      <HeroSection />
+      <WelcomeSection />
+      <DAOSection />
+      <EssenceSection />
     </>
   );
 }
@@ -28,7 +26,7 @@ export default function Home() {
 const HeroSection = () => {
   return (
     <div
-      className="h-screen w-full bg-cover bg-center bg-no-repeat"
+      className="h-screen w-full bg-cover bg-center bg-no-repeat animate-in fade-in duration-700"
       style={{
         backgroundImage: `
           -webkit-linear-gradient(top, 
@@ -44,7 +42,7 @@ const HeroSection = () => {
         <h1 className="text-shadow text-slate-200 animate-in fade-in slide-in-from-top-10 duration-700">
           Immerse yourself in a Grand Strategy Sci-Fi Future.
         </h1>
-        <div className="flex w-full items-center justify-center">
+        <div className="flex w-full justify-center ">
           {/* <button className="btn w-64 animate-in fade-in slide-in-from-bottom-10 duration-700">
                 Enter the World
               </button> */}
@@ -75,7 +73,7 @@ const HeroSection = () => {
 const WelcomeSection = () => {
   return (
     <div
-      className="h-[550px] min-h-screen w-full bg-cover bg-center bg-no-repeat "
+      className="h-[550px] min-h-screen w-full bg-cover bg-center bg-no-repeat"
       id="welcome"
       style={{
         backgroundImage: `

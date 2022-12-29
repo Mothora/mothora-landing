@@ -3,8 +3,11 @@ import Image from "next/image";
 import { SiDiscord } from "react-icons/si";
 import { BsStack, BsTelegram, BsTwitter } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Header() {
+  const router = useRouter();
   return (
     <div className="fixed top-0 right-0 z-10 h-20 w-full bg-black bg-opacity-20 px-4 py-2 shadow-lg animate-in fade-in slide-in-from-top-10 duration-700">
       <div className="flex h-full w-full items-center justify-between">
@@ -16,13 +19,17 @@ export default function Header() {
             width={300}
             height={100}
             onClick={() => {
-              window.location.replace("https://mothora.xyz");
+              // window.location.replace("https://mothora.xyz");
+              router.push("/");
             }}
           />
           <div className="flex gap-2">
-            <a className="btn btn-header animate-in fade-in slide-in-from-left-10 duration-300">
+            <Link
+              className="btn btn-header animate-in fade-in slide-in-from-left-10 duration-300"
+              href="/daos"
+            >
               <span>DAOs</span>
-            </a>
+            </Link>
 
             <a className="btn btn-header animate-in fade-in slide-in-from-left-16 duration-300">
               <span>FAQ</span>
