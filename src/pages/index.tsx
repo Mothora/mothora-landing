@@ -150,19 +150,15 @@ const DAOSection = () => {
 
       {/* Icons */}
       <div className="my-6 flex shrink-0 items-center gap-6 rounded-lg bg-gray-700 bg-opacity-20 pl-4">
-        <a
-          href="https://mothora.gitbook.io/mothora/set-and-setting/the-daos/shadow-council"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <Link href="/daos#Shadow Council">
           <Image
-            src="/images/daos/sc_logo.png"
+            src="/images/daos/sc-logo.png"
             alt="Shadow Council"
             width="160"
             height="160"
             className="cursor-pointer duration-300 hover:scale-110"
           />
-        </a>
+        </Link>
 
         <a
           href="https://mothora.gitbook.io/mothora/set-and-setting/the-daos/eclipse-horizon"
@@ -170,7 +166,7 @@ const DAOSection = () => {
           rel="noreferrer"
         >
           <Image
-            src="/images/daos/eh_logo.png"
+            src="/images/daos/eh-logo.png"
             alt="Iron Empire"
             width="160"
             height="160"
@@ -184,7 +180,7 @@ const DAOSection = () => {
           rel="noreferrer"
         >
           <Image
-            src="/images/daos/fed_logo.png"
+            src="/images/daos/fed-logo.png"
             alt="The Federation"
             width="160"
             height="160"

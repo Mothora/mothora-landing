@@ -19,7 +19,6 @@ export default function Header() {
             width={300}
             height={100}
             onClick={() => {
-              // window.location.replace("https://mothora.xyz");
               router.push("/");
             }}
           />
@@ -31,9 +30,12 @@ export default function Header() {
               <span>DAOs</span>
             </Link>
 
-            <a className="btn btn-header animate-in fade-in slide-in-from-left-16 duration-300">
+            <Link
+              className="btn btn-header animate-in fade-in slide-in-from-left-16 duration-300"
+              href="/faq"
+            >
               <span>FAQ</span>
-            </a>
+            </Link>
 
             <a className="btn btn-header animate-in fade-in slide-in-from-left-24 duration-300">
               <span>Community</span>
