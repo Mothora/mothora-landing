@@ -7,7 +7,7 @@ import { RxDoubleArrowRight } from "react-icons/rx";
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-hidden overflow-y-hidden">
       <Head>
         <title>Mothora</title>
         <meta name="description" content="Mothora" />
@@ -19,7 +19,7 @@ export default function Home() {
       <WelcomeSection />
       <DAOSection />
       <EssenceSection />
-    </>
+    </div>
   );
 }
 
@@ -39,7 +39,7 @@ const HeroSection = () => {
       }}
     >
       <div className="flex h-full flex-col items-center justify-center">
-        <h1 className="text-shadow text-slate-200 animate-in fade-in slide-in-from-top-10 duration-700">
+        <h1 className="text-shadow text-center text-slate-200 animate-in fade-in slide-in-from-top-10 duration-700">
           Immerse yourself in a Grand Strategy Sci-Fi Future.
         </h1>
         <div className="flex w-full justify-center ">
@@ -84,7 +84,7 @@ const WelcomeSection = () => {
           rgba(0,0,0,0.2) 80%,
           rgba(0,0,0,0.9) 100%
           ),
-          url("/images/cdys-walls.png")`,
+          url("/images/cdys-walls.jpeg")`,
       }}
     >
       <div className="flex h-full items-center justify-between px-14 pb-16">
@@ -112,7 +112,7 @@ const WelcomeSection = () => {
         </div>
         <div className="pt-10">
           <Image
-            src="/images/n1.png"
+            src="/images/n1.jpeg"
             alt="Mothora Example"
             className="rounded-md"
             width={400}
@@ -127,7 +127,7 @@ const WelcomeSection = () => {
 const DAOSection = () => {
   return (
     <div
-      className="flex min-h-screen flex-col items-center justify-center"
+      className="flex min-h-screen flex-col items-center justify-center bg-cover"
       style={{
         backgroundImage: `
           -webkit-linear-gradient(top, 
@@ -137,7 +137,7 @@ const DAOSection = () => {
           rgba(0,0,0,0) 80%,
           rgba(0,0,0,0.2) 100%
           ),
-          url("/images/cdys-walls.png")`,
+          url("/images/walls-zoom.jpeg")`,
       }}
     >
       <h2 className="text-shadow text-center text-3xl">Meet the DAOs</h2>
@@ -217,7 +217,7 @@ const EssenceSection = () => {
           rgba(0,0,0,0.3) 80%,
           rgba(0,0,0,0.4) 100%
           ),
-          url("/images/cdys-essence-2.png")`,
+          url("/images/cdys-essence-2.jpeg")`,
       }}
     >
       <div className="flex h-full flex-col items-center justify-center gap-2">
@@ -304,7 +304,7 @@ const SlideTransitionButton = ({
     );
   };
 
-  const classNames = `group relative my-4 inline-flex w-${w} items-center justify-center overflow-hidden rounded-lg bg-mothora-primary px-6 py-3 text-white shadow-md transition animate-in fade-in slide-in-from-bottom-10 duration-700 ease-out`;
+  const classNames = `group relative my-4 inline-flex w-${w} items-center justify-center rounded-lg overflow-x-hidden bg-mothora-primary px-6 py-3 text-white shadow-md transition animate-in fade-in slide-in-from-bottom-10 duration-700 ease-out`;
   return type === "a" ? (
     <a href={link} className={classNames}>
       <InnerContent />

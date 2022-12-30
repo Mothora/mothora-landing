@@ -29,8 +29,6 @@ export default function Daos() {
       >
         <div className="flex justify-center gap-20 transition-all duration-300 group-hover:scale-105">
           <div
-            // src={image}
-            // alt={name}
             style={{
               backgroundImage: `url(${image})`,
             }}
@@ -80,16 +78,23 @@ export default function Daos() {
           <div className="flex w-full flex-col items-center justify-center rounded-2xl bg-black bg-opacity-50 px-6 pb-4 text-center backdrop-blur-md animate-in fade-in slide-in-from-top-10 duration-700">
             <h1 className="pb-0">The DAOs</h1>
             <h2>Meet the 3 DAOs</h2>
-            <p>
+            <p className="pb-4">
               Decentralized Autonomous Organizations, or DAOs, are a critical
               part of Mothora. They allow for groups of like-minded players to
               govern themselves. These organizations of people can make
               proposals that influence how the game is meant to be played by
               them, their strategies and how they are managed.
             </p>
+            <a
+              className="btn text-center"
+              href="https://mothora.gitbook.io/mothora/fundamentals/daos"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Read More about DAOs
+            </a>
           </div>
 
-          {/* dao section */}
           <DAOSection
             image="/images/daos/sc.jpeg"
             imageLogo="sc-logo.png"

@@ -15,6 +15,10 @@
     @apply flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-opacity-10 py-1 px-2 font-semibold text-gray-200 transition-colors duration-500 hover:bg-gray-700 hover:bg-opacity-40;
   }
 
+  .btn-header-social-mobile {
+    @apply px-8 py-8;
+  }
+
   .btn-blue {
     @apply rounded-md border-2 border-sky-700 bg-sky-600 py-2 px-4 font-semibold text-white transition-colors hover:border-sky-800 hover:bg-sky-700 disabled:cursor-not-allowed;
   }

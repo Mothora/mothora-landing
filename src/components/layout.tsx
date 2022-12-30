@@ -8,7 +8,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="text-white">
       <Header />
-      <main>{children}</main>
+      <main className="overflow-y-hidden">{children}</main>
       {/* <Footer /> */}
     </div>
   );
