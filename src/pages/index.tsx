@@ -169,11 +169,7 @@ const DAOSection = () => {
           />
         </Link>
 
-        <a
-          href="https://mothora.gitbook.io/mothora/set-and-setting/the-daos/eclipse-horizon"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <Link href="/daos#Eclipse Horizon">
           <Image
             src="/images/daos/eh-logo.png"
             alt="Iron Empire"
@@ -181,13 +177,9 @@ const DAOSection = () => {
             height="150"
             className="cursor-pointer duration-300 hover:scale-110"
           />
-        </a>
+        </Link>
 
-        <a
-          href="https://mothora.gitbook.io/mothora/set-and-setting/the-daos/the-federation"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <Link href="/daos#The Federation">
           <Image
             src="/images/daos/fed-logo.png"
             alt="The Federation"
@@ -195,7 +187,7 @@ const DAOSection = () => {
             height="140"
             className="cursor-pointer duration-300 hover:scale-110"
           />
-        </a>
+        </Link>
       </div>
 
       <p className="max-w-2xl text-center">

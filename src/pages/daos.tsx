@@ -22,7 +22,7 @@ export default function Daos() {
   }: DAOSectionProps) => {
     return (
       <div
-        className={`${color} group w-full rounded-xl border border-solid border-slate-700 bg-opacity-20 py-12 backdrop-blur-md animate-in fade-in md:px-12 md:py-8 slide-in-from-${
+        className={`${color} group w-full scroll-m-24 rounded-xl border border-solid border-slate-700 bg-opacity-20 py-12 backdrop-blur-md animate-in fade-in md:px-12 md:py-8 slide-in-from-${
           layout == "left" ? "left" : "right"
         }-10 duration-700`}
         id={name}
