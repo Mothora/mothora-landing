@@ -13,6 +13,7 @@ import { useWindowSize } from "hooks/useWindowSize";
 export default function Header() {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [closingMenu, setClosingMenu] = useState<boolean>(false);
   const mobileMenu = createRef<HTMLDivElement>();
 
   const windowSize = useWindowSize();
@@ -20,116 +21,139 @@ export default function Header() {
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
-      mobileMenu.current?.classList.remove("hidden");
     } else {
       document.body.style.overflow = "unset";
-      mobileMenu.current?.classList.remove("hidden");
-
-      setTimeout(() => {
-        if (!menuOpen) {
-          mobileMenu.current?.classList.add("hidden");
-        }
-      }, 500);
     }
   }, [menuOpen]);
 
   useEffect(() => {
-    mobileMenu.current?.classList.add("hidden");
-  }, []);
-
-  useEffect(() => {
     if (!!windowSize.width && windowSize.width > 1024) {
-      setMenuOpen(false);
-      mobileMenu.current?.classList.add("hidden");
+      closeMenu();
     }
   }, [windowSize.width]);
 
+  function toggleMenu() {
+    if (menuOpen) {
+      closeMenu();
+    } else {
+      setMenuOpen(true);
+      mobileMenu.current?.classList.remove("hidden");
+      setClosingMenu(false);
+    }
+  }
+
+  function closeMenu() {
+    if (closingMenu) return;
+    setMenuOpen(false);
+    setClosingMenu(true);
+    setTimeout(() => {
+      if (!menuOpen) {
+        setClosingMenu(false);
+        mobileMenu.current?.classList.add("hidden");
+      }
+    }, 500);
+  }
+
   return (
     <>
-      <div
-        ref={mobileMenu}
-        className={`fixed top-0 right-0 z-10 hidden h-screen w-full touch-none bg-mothora-secondary/50 bg-opacity-40 px-4 py-2 shadow-lg backdrop-blur-md animate-in fade-in zoom-in-50 duration-300 ${
-          !menuOpen && "zoom-out-5 animate-out fade-out duration-500"
-        } `}
-      >
-        <div className="flex flex-col items-center py-16">
-          <div className="flex w-72 flex-col gap-2 py-12 text-center">
-            <Link className="btn btn-header" href="/daos">
-              <span>DAOs</span>
-            </Link>
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div
+          ref={mobileMenu}
+          className={`zoom-in-50' fixed top-0 right-0 z-10 h-screen w-full touch-none bg-mothora-secondary/50 bg-opacity-40 px-4 py-2 shadow-lg backdrop-blur-md animate-in fade-in duration-500`}
+        >
+          <div className="flex flex-col items-center py-16">
+            <div className="flex w-72 flex-col gap-2 py-12 text-center">
+              <Link
+                className="btn btn-header"
+                href="/"
+                onClick={() => closeMenu()}
+              >
+                <span>Home</span>
+              </Link>
+              <Link
+                className="btn btn-header"
+                href="/daos"
+                onClick={() => setMenuOpen(false)}
+              >
+                <span>DAOs</span>
+              </Link>
 
-            <Link className="btn btn-header" href="/faq">
-              <span>FAQ</span>
-            </Link>
+              <Link className="btn btn-header" href="/faq">
+                <span>FAQ</span>
+              </Link>
 
-            <a
-              className="btn btn-header"
-              href="https://mothora.gitbook.io/mothora/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>Read More</span>
-            </a>
-            <button className="btn" onClick={() => setMenuOpen(false)}>
-              Close
-            </button>
-          </div>
-          {/* social icons */}
-          <div className="flex h-full w-full justify-center gap-2">
-            <a
-              href="https://discord.gg/KxR6GzZWkK"
-              target={"_blank"}
-              rel="noreferrer"
-              className="btn-header-social btn-header-social-mobile"
-            >
-              <span>
-                <SiDiscord size={32} />
-              </span>
-            </a>
-            <a
-              href="https://twitter.com/mothora_"
-              target={"_blank"}
-              rel="noreferrer"
-              className="btn-header-social btn-header-social-mobile"
-            >
-              <span>
-                <BsTwitter size={32} />
-              </span>
-            </a>
-            <a
-              href="https://www.instagram.com/mothoragame/"
-              target={"_blank"}
-              rel="noreferrer"
-              className="btn-header-social btn-header-social-mobile"
-            >
-              <span>
-                <BsInstagram size={32} />
-              </span>
-            </a>
-            <a
-              href="https://t.me/mothoragame"
-              target={"_blank"}
-              rel="noreferrer"
-              className="btn-header-social btn-header-social-mobile"
-            >
-              <span>
-                <BsTelegram size={32} />
-              </span>
-            </a>
-            <a
-              href="https://mothora.substack.com/_"
-              target={"_blank"}
-              rel="noreferrer"
-              className="btn-header-social btn-header-social-mobile"
-            >
-              <span>
-                <BsStack size={32} />
-              </span>
-            </a>
+              <a
+                className="btn btn-header"
+                href="https://mothora.gitbook.io/mothora/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Read More</span>
+              </a>
+              <button className="btn" onClick={() => setMenuOpen(false)}>
+                Close
+              </button>
+            </div>
+            {/* social icons */}
+            <div className="flex h-full w-full justify-center gap-2">
+              <a
+                href="https://discord.gg/KxR6GzZWkK"
+                target={"_blank"}
+                rel="noreferrer"
+                className="btn-header-social btn-header-social-mobile"
+              >
+                <span>
+                  <SiDiscord size={32} />
+                </span>
+              </a>
+              <a
+                href="https://twitter.com/mothora_"
+                target={"_blank"}
+                rel="noreferrer"
+                className="btn-header-social btn-header-social-mobile"
+              >
+                <span>
+                  <BsTwitter size={32} />
+                </span>
+              </a>
+              <a
+                href="https://www.instagram.com/mothoragame/"
+                target={"_blank"}
+                rel="noreferrer"
+                className="btn-header-social btn-header-social-mobile"
+              >
+                <span>
+                  <BsInstagram size={32} />
+                </span>
+              </a>
+              <a
+                href="https://t.me/mothoragame"
+                target={"_blank"}
+                rel="noreferrer"
+                className="btn-header-social btn-header-social-mobile"
+              >
+                <span>
+                  <BsTelegram size={32} />
+                </span>
+              </a>
+              <a
+                href="https://mothora.substack.com/_"
+                target={"_blank"}
+                rel="noreferrer"
+                className="btn-header-social btn-header-social-mobile"
+              >
+                <span>
+                  <BsStack size={32} />
+                </span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="fixed top-0 right-0 z-10 h-20 w-full bg-black bg-opacity-20 px-4 py-2 shadow-lg animate-in fade-in slide-in-from-top-10 duration-700">
+      )}
+
+      {/* Header */}
+      <div className="fixed top-0 right-0 z-10 h-20 w-full bg-black bg-opacity-20 px-4 py-2 shadow-lg backdrop-blur-sm animate-in fade-in slide-in-from-top-10 duration-700">
         <div className="flex h-full w-full items-center justify-between">
           <div className="flex h-full w-full items-center gap-4">
             <Image
@@ -144,6 +168,12 @@ export default function Header() {
             />
             {/* Links */}
             <div className="hidden gap-2 lg:flex">
+              <Link
+                className="btn btn-header animate-in fade-in slide-in-from-left-10 duration-300"
+                href="/"
+              >
+                <span>Home</span>
+              </Link>
               <Link
                 className="btn btn-header animate-in fade-in slide-in-from-left-10 duration-300"
                 href="/daos"
@@ -225,7 +255,7 @@ export default function Header() {
           <div
             className="flex transition-transform duration-300 hover:scale-110 hover:text-mothora-primary lg:hidden"
             onClick={() => {
-              setMenuOpen((open) => !open);
+              toggleMenu();
             }}
           >
             <BiMenuAltRight size={32} />

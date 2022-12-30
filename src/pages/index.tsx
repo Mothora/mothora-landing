@@ -3,7 +3,7 @@ import Header from "@components/header";
 import Link from "next/link";
 import { BsChevronDown } from "react-icons/bs";
 import Image from "next/image";
-import { RxDoubleArrowRight } from "react-icons/rx";
+import { RxDoubleArrowDown, RxDoubleArrowRight } from "react-icons/rx";
 
 export default function Home() {
   return (
@@ -87,16 +87,16 @@ const WelcomeSection = () => {
           url("/images/cdys-walls.jpeg")`,
       }}
     >
-      <div className="flex h-full items-center justify-between px-14 pb-16">
-        <div>
+      <div className="flex h-full flex-col items-center justify-between px-14 pb-16 text-center md:flex-row">
+        <div className="flex flex-col justify-center lg:justify-start lg:text-left">
           <h2>Welcome to Mothora</h2>
-          <p className="max-w-xl">
+          <p className="w-80 lg:w-[550px]">
             Join the fight for dominance in Mothora, the epic Grand Strategy
             First-Person Shooter Web3 game set in a dystopian sci-fi future.
             Mothora is a Grand Strategy First-Person Shooter web3 game, players
             can join DAOs to govern themselves and the outcome of the game.
           </p>
-          <div className="flex gap-4 pt-4">
+          <div className="flex flex-col items-center justify-center gap-4 pt-4 lg:flex-row lg:justify-start">
             <a className="btn w-56 text-center" href="https://app.mothora.xyz">
               Enter the World Now
             </a>
@@ -114,9 +114,16 @@ const WelcomeSection = () => {
           <Image
             src="/images/n1.jpeg"
             alt="Mothora Example"
-            className="rounded-md"
+            className="hidden rounded-md md:block"
             width={400}
             height={400}
+          />
+          <Image
+            src="/images/n1.jpeg"
+            alt="Mothora Example"
+            className="rounded-md md:hidden"
+            width={200}
+            height={200}
           />
         </div>
       </div>
@@ -140,8 +147,10 @@ const DAOSection = () => {
           url("/images/walls-zoom.jpeg")`,
       }}
     >
-      <h2 className="text-shadow text-center text-3xl">Meet the DAOs</h2>
-      <p className="max-w-3xl text-center">
+      <h2 className="text-shadow pt-14 text-center text-3xl md:pt-0">
+        Meet the DAOs
+      </h2>
+      <p className="w-80 text-center lg:w-[600px]">
         DAOs allow for groups of like-minded players to govern themselves. These
         organizations of people can make proposals that influence how the game
         is meant to be played by them, their strategies and how they are
@@ -154,8 +163,8 @@ const DAOSection = () => {
           <Image
             src="/images/daos/sc-logo.png"
             alt="Shadow Council"
-            width="160"
-            height="160"
+            width="130"
+            height="130"
             className="cursor-pointer duration-300 hover:scale-110"
           />
         </Link>
@@ -168,8 +177,8 @@ const DAOSection = () => {
           <Image
             src="/images/daos/eh-logo.png"
             alt="Iron Empire"
-            width="160"
-            height="160"
+            width="150"
+            height="150"
             className="cursor-pointer duration-300 hover:scale-110"
           />
         </a>
@@ -182,8 +191,8 @@ const DAOSection = () => {
           <Image
             src="/images/daos/fed-logo.png"
             alt="The Federation"
-            width="160"
-            height="160"
+            width="140"
+            height="140"
             className="cursor-pointer duration-300 hover:scale-110"
           />
         </a>
@@ -200,6 +209,7 @@ const DAOSection = () => {
         link="/daos"
         type="link"
       />
+      <div className="pb-8"></div>
     </div>
   );
 };
@@ -220,11 +230,12 @@ const EssenceSection = () => {
           url("/images/cdys-essence-2.jpeg")`,
       }}
     >
-      <div className="flex h-full flex-col items-center justify-center gap-2">
-        <div className="mb-6 flex items-center gap-8 px-8">
-          <div className="w-[400px] rounded-xl bg-black bg-opacity-70 px-4 pb-4">
+      <div className="flex h-full flex-col items-center gap-2">
+        <div className="mt-6 flex flex-shrink-0 flex-col items-center gap-4 px-8 lg:mt-32 lg:mb-6 lg:flex-row">
+          {/* First Card */}
+          <div className="h-56 w-[270px] rounded-xl bg-black bg-opacity-70 px-4 pb-4 md:w-[350px] lg:h-48 lg:w-[400px]">
             <h2 className="essence text-center text-4xl">ESSENCE</h2>
-            <p className="max-w-3xl text-center font-bold">
+            <p className="text-center text-sm font-bold md:max-w-3xl md:text-base">
               <span className="text-shadow">
                 Earn and craft unique, soulbound non-fungible tokens (NFTs) as
                 you earn{" "}
@@ -236,11 +247,13 @@ const EssenceSection = () => {
             </p>
           </div>
 
-          <RxDoubleArrowRight size={64} />
+          <RxDoubleArrowRight size={64} className="hidden lg:block" />
+          <RxDoubleArrowDown size={64} className="lg:hidden" />
 
-          <div className="w-[400px] rounded-xl bg-black bg-opacity-70 px-4 pb-4">
+          {/* Second Card */}
+          <div className="h-56 w-[270px] rounded-xl bg-black bg-opacity-70 px-4 pb-4 md:w-[350px] lg:h-48 lg:w-[400px]">
             <h2 className="text-shadow text-center text-4xl font-bold">SRep</h2>
-            <p className="max-w-3xl text-center font-bold">
+            <p className="text-center text-sm font-bold md:max-w-3xl md:text-base">
               <span className="text-shadow">
                 SRep represents the shares of ownership a player has on their
                 DAO during a season. It is obtained by locking{" "}
@@ -304,7 +317,7 @@ const SlideTransitionButton = ({
     );
   };
 
-  const classNames = `group relative my-4 inline-flex w-${w} items-center justify-center rounded-lg overflow-x-hidden bg-mothora-primary px-6 py-3 text-white shadow-md transition animate-in fade-in slide-in-from-bottom-10 duration-700 ease-out`;
+  const classNames = `group relative my-4 inline-flex w-${w} h-14 items-center justify-center rounded-lg overflow-x-hidden bg-mothora-primary px-6 py-3 text-white shadow-md transition animate-in fade-in slide-in-from-bottom-10 duration-700 ease-out`;
   return type === "a" ? (
     <a href={link} className={classNames}>
       <InnerContent />
