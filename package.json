@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^1.0.0-beta.5",
+    "@headlessui/react": "^1.7.7",
     "@next/font": "13.1.0",
     "@types/node": "18.11.17",
     "@types/react": "18.0.26",
