@@ -1,3 +1,4 @@
+import Footer from "./footer";
 import Header from "./header";
 
 interface LayoutProps {
@@ -9,7 +10,7 @@ export default function Layout({ children }: LayoutProps) {
     <div className="text-white">
       <Header />
       <main className="overflow-y-hidden">{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
