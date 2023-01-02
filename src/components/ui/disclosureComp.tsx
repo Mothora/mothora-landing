@@ -27,7 +27,7 @@ export default function DisclosureComp({ text, answer }: DisclosureCompProps) {
             leaveFrom="transform scale-100 opacity-100"
             leaveTo="transform scale-95 opacity-0"
           > */}
-          <Disclosure.Panel className="text-md mb-4 rounded-md bg-gray-800 px-4 pt-4 pb-2 text-gray-300">
+          <Disclosure.Panel className="text-md mb-4 rounded-md bg-gray-800 px-4 pt-4 pb-2 text-gray-200">
             {answer}
           </Disclosure.Panel>
           {/* </Transition> */}

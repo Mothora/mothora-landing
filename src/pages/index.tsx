@@ -222,7 +222,7 @@ const EssenceSection = () => {
           url("/images/cdys-essence-2.jpeg")`,
       }}
     >
-      <div className="flex h-full flex-col items-center gap-2">
+      <div className="flex h-full w-full flex-col items-center gap-2">
         <div className="mt-6 flex flex-shrink-0 flex-col items-center gap-4 px-8 lg:mt-32 lg:mb-6 lg:flex-row">
           {/* First Card */}
           <div className="h-56 w-[270px] rounded-xl bg-black bg-opacity-70 px-4 pb-4 md:w-[350px] lg:h-48 lg:w-[400px]">
@@ -258,10 +258,10 @@ const EssenceSection = () => {
 
         <SlideTransitionButton
           text="Learn more about the Economy Loop"
-          secondaryText="Become an Economy Expert"
+          secondaryText="Become a Game Economy Expert"
           link="https://mothora.gitbook.io/mothora/fundamentals/economic-loops"
           type="a"
-          w="96"
+          w="[600px]"
         />
       </div>
     </div>
