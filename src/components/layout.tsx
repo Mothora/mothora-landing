@@ -7,9 +7,9 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="text-white">
+    <div className="relative min-h-screen text-white">
       <Header />
-      <main className="overflow-y-hidden">{children}</main>
+      <main className="overflow-y-hidden pb-36">{children}</main>
       <Footer />
     </div>
   );

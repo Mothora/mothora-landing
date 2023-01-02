@@ -1,9 +1,11 @@
 import Image from "next/image";
+import { BsDiscord, BsInstagram, BsTelegram, BsTwitter } from "react-icons/bs";
+import { SiGitbook, SiSubstack } from "react-icons/si";
 
 export default function Footer() {
   return (
-    <footer className="relative bottom-0 w-full bg-[#2d1613ff] p-3 text-center text-xs">
-      <div className="flex flex-col items-center justify-between gap-4 md:flex-row md:gap-0">
+    <footer className="botom-0 absolute bottom-0 flex h-32 w-full items-center bg-black bg-opacity-10 p-3 text-center text-xs backdrop-blur-sm md:h-20">
+      <div className="flex w-full flex-col items-center justify-between gap-4 md:flex-row md:gap-0">
         <div className="flex flex-col">
           <div className="flex items-center gap-4 text-white">
             <a href="https://mothora.xyz">
@@ -25,47 +27,43 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex items-center gap-4">
-          <div className="flex flex-col">
-            <a
-              className="text-gray-400 hover:underline"
-              href="https://discord.gg/KxR6GzZWkK"
-            >
-              Discord
-            </a>
-            <a
-              className="text-gray-400 hover:underline"
-              href="https://twitter.com/mothora_"
-            >
-              Twitter
-            </a>
-            <a
-              className="text-gray-400 hover:underline"
-              href="https://mothora.gitbook.io/mothora/"
-            >
-              Gitbook
-            </a>
-          </div>
-          <div className="flex flex-col">
-            <a
-              className="text-gray-400 hover:underline"
-              href="https://www.instagram.com/mothoragame/"
-            >
-              Instagram
-            </a>
-            <a
-              className="text-gray-400 hover:underline"
-              href="https://t.me/mothoragame"
-            >
-              Telegram
-            </a>
-            <a
-              className="text-gray-400 hover:underline"
-              href="https://mothora.substack.com/_"
-            >
-              Substack
-            </a>
-          </div>
+        <div className="flex items-center gap-6">
+          <a
+            className="text-gray-400 hover:underline"
+            href="https://mothora.gitbook.io/mothora/"
+          >
+            <SiGitbook size={28} />
+          </a>
+          <a
+            className="text-gray-400 hover:underline"
+            href="https://discord.gg/KxR6GzZWkK"
+          >
+            <BsDiscord size={28} />
+          </a>
+          <a
+            className="text-gray-400 hover:underline"
+            href="https://twitter.com/mothora_"
+          >
+            <BsTwitter size={28} />
+          </a>
+          <a
+            className="text-gray-400 hover:underline"
+            href="https://www.instagram.com/mothoragame/"
+          >
+            <BsInstagram size={28} />
+          </a>
+          <a
+            className="text-gray-400 hover:underline"
+            href="https://t.me/mothoragame"
+          >
+            <BsTelegram size={28} />
+          </a>
+          <a
+            className="text-gray-400 hover:underline"
+            href="https://mothora.substack.com/_"
+          >
+            <SiSubstack size={28} />
+          </a>
         </div>
       </div>
     </footer>

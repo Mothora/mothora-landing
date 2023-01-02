@@ -24,9 +24,9 @@ export default function Faq() {
           url("/images/cdys-essence-2.jpeg")`,
         }}
       ></div>
-      <div className="relative mt-20 flex flex-col items-center rounded-lg px-4">
+      <div className="relative mt-20 flex flex-col items-center rounded-lg px-4 pb-24">
         <h1>FAQ</h1>
-        <h2 className="mb-2 rounded-lg bg-black bg-opacity-70 px-4 py-4 text-center backdrop-blur-sm">
+        <h2 className="mb-2 max-w-[900px] rounded-lg bg-black bg-opacity-70 px-4 py-4 text-center backdrop-blur-sm">
           Welcome to the FAQ page! Here, you'll find answers to some of the most
           common questions. If you have a question that isn't answered here,
           don't hesitate to ask the team for assistance.

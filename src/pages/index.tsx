@@ -38,7 +38,17 @@ const HeroSection = () => {
           url("/images/top-mountain.jpeg")`,
       }}
     >
-      <div className="flex h-full flex-col items-center justify-center">
+      <div className="relative flex h-full flex-col items-center justify-center">
+        {/* Scroll Indicator */}
+        <div className="absolute inset-x-0 bottom-6 mx-auto transition-transform animate-in fade-in slide-in-from-bottom-10 duration-500 hover:translate-y-2">
+          <a
+            className="mx-auto flex cursor-pointer flex-col items-center"
+            href="#welcome"
+          >
+            <p className="text-shadow text-2xl font-bold">Scroll</p>
+            <BsChevronDown />
+          </a>
+        </div>
         <h1 className="text-shadow text-center text-slate-200 animate-in fade-in slide-in-from-top-10 duration-700">
           Immerse yourself in a Grand Strategy Sci-Fi Future.
         </h1>
@@ -54,16 +64,6 @@ const HeroSection = () => {
             type="a"
             w="72"
           />
-        </div>
-        {/* Scroll Indicator */}
-        <div className="absolute inset-x-0 bottom-6 mx-auto transition-transform animate-in fade-in slide-in-from-bottom-10 duration-500 hover:translate-y-2">
-          <a
-            className="mx-auto flex cursor-pointer flex-col items-center"
-            href="#welcome"
-          >
-            <p className="text-shadow text-2xl font-bold">Scroll</p>
-            <BsChevronDown />
-          </a>
         </div>
       </div>
     </div>

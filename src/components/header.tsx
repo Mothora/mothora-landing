@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 import { BiMenuAltRight } from "react-icons/bi";
 import { createRef, useEffect, useState } from "react";
 import { useWindowSize } from "hooks/useWindowSize";
-
+import { IoIosArrowBack } from "react-icons/io";
 export default function Header() {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -74,12 +74,16 @@ export default function Header() {
               <Link
                 className="btn btn-header"
                 href="/daos"
-                onClick={() => setMenuOpen(false)}
+                onClick={() => closeMenu()}
               >
                 <span>DAOs</span>
               </Link>
 
-              <Link className="btn btn-header" href="/faq">
+              <Link
+                className="btn btn-header"
+                href="/faq"
+                onClick={() => closeMenu()}
+              >
                 <span>FAQ</span>
               </Link>
 
@@ -168,12 +172,14 @@ export default function Header() {
             />
             {/* Links */}
             <div className="hidden gap-2 lg:flex">
-              <Link
-                className="btn btn-header animate-in fade-in slide-in-from-left-10 duration-300"
-                href="/"
-              >
-                <span>Home</span>
-              </Link>
+              {router.pathname !== "/" && (
+                <div className="flex items-center px-4 animate-in fade-in slide-in-from-left-10 duration-300">
+                  <Link href="/">
+                    <IoIosArrowBack size={32} />
+                  </Link>
+                </div>
+              )}
+
               <Link
                 className="btn btn-header animate-in fade-in slide-in-from-left-10 duration-300"
                 href="/daos"
