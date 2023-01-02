@@ -1,11 +1,17 @@
 import Image from "next/image";
-import { BsDiscord, BsInstagram, BsTelegram, BsTwitter } from "react-icons/bs";
-import { SiGitbook, SiSubstack } from "react-icons/si";
+import {
+  SiDiscord,
+  SiGitbook,
+  SiInstagram,
+  SiSubstack,
+  SiTelegram,
+  SiTwitter,
+} from "react-icons/si";
 
 export default function Footer() {
   return (
     <footer className="botom-0 absolute bottom-0 flex h-32 w-full items-center bg-black bg-opacity-10 p-3 text-center text-xs backdrop-blur-sm md:h-20">
-      <div className="flex w-full flex-col items-center justify-between gap-4 md:flex-row md:gap-0">
+      <div className="flex w-full flex-col items-center justify-between gap-4 md:flex-row md:gap-0 md:px-4">
         <div className="flex flex-col">
           <div className="flex items-center gap-4 text-white">
             <a href="https://mothora.xyz">
@@ -38,25 +44,25 @@ export default function Footer() {
             className="text-gray-400 hover:underline"
             href="https://discord.gg/KxR6GzZWkK"
           >
-            <BsDiscord size={28} />
+            <SiDiscord size={28} />
           </a>
           <a
             className="text-gray-400 hover:underline"
             href="https://twitter.com/mothora_"
           >
-            <BsTwitter size={28} />
+            <SiTwitter size={28} />
           </a>
           <a
             className="text-gray-400 hover:underline"
             href="https://www.instagram.com/mothoragame/"
           >
-            <BsInstagram size={28} />
+            <SiInstagram size={28} />
           </a>
           <a
             className="text-gray-400 hover:underline"
             href="https://t.me/mothoragame"
           >
-            <BsTelegram size={28} />
+            <SiTelegram size={28} />
           </a>
           <a
             className="text-gray-400 hover:underline"

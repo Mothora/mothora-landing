@@ -1,8 +1,7 @@
 import Image from "next/image";
 
-import { SiDiscord } from "react-icons/si";
-import { BsStack, BsTelegram, BsTwitter } from "react-icons/bs";
-import { BsInstagram } from "react-icons/bs";
+import { SiDiscord, SiInstagram, SiTelegram, SiTwitter } from "react-icons/si";
+import { BsStack } from "react-icons/bs";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -118,7 +117,7 @@ export default function Header() {
                 className="btn-header-social btn-header-social-mobile"
               >
                 <span>
-                  <BsTwitter size={32} />
+                  <SiTwitter size={32} />
                 </span>
               </a>
               <a
@@ -128,7 +127,7 @@ export default function Header() {
                 className="btn-header-social btn-header-social-mobile"
               >
                 <span>
-                  <BsInstagram size={32} />
+                  <SiInstagram size={32} />
                 </span>
               </a>
               <a
@@ -138,7 +137,7 @@ export default function Header() {
                 className="btn-header-social btn-header-social-mobile"
               >
                 <span>
-                  <BsTelegram size={32} />
+                  <SiTelegram size={32} />
                 </span>
               </a>
               <a
@@ -223,7 +222,7 @@ export default function Header() {
               className="btn-header-social"
             >
               <span>
-                <BsTwitter size={24} />
+                <SiTwitter size={24} />
               </span>
             </a>
             <a
@@ -233,7 +232,7 @@ export default function Header() {
               className="btn-header-social"
             >
               <span>
-                <BsInstagram size={24} />
+                <SiInstagram size={24} />
               </span>
             </a>
             <a
@@ -243,7 +242,7 @@ export default function Header() {
               className="btn-header-social"
             >
               <span>
-                <BsTelegram size={24} />
+                <SiTelegram size={24} />
               </span>
             </a>
             <a

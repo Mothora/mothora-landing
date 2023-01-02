@@ -209,7 +209,7 @@ const DAOSection = () => {
 const EssenceSection = () => {
   return (
     <div
-      className="h-[700px] min-h-screen w-full bg-cover bg-center bg-no-repeat pb-8"
+      className="h-[900px] min-h-screen w-full bg-cover bg-center bg-no-repeat pb-8 md:h-[700px]"
       style={{
         backgroundImage: `
           -webkit-linear-gradient(top, 
