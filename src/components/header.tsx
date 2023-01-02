@@ -45,12 +45,7 @@ export default function Header() {
     if (closingMenu) return;
     setMenuOpen(false);
     setClosingMenu(true);
-    setTimeout(() => {
-      if (!menuOpen) {
-        setClosingMenu(false);
-        mobileMenu.current?.classList.add("hidden");
-      }
-    }, 500);
+    mobileMenu.current?.classList.add("hidden");
   }
 
   return (

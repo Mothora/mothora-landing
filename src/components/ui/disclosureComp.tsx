@@ -12,7 +12,9 @@ export default function DisclosureComp({ text, answer }: DisclosureCompProps) {
       {({ open }) => (
         <>
           <Disclosure.Button className="text-md flex w-full justify-between bg-mothora-primary px-4 py-2 text-left font-bold text-black hover:bg-mothora-hover focus:outline-none focus-visible:ring focus-visible:ring-mothora-primary focus-visible:ring-opacity-75">
-            <span>{text}</span>
+            <p>
+              <span>{text}</span>
+            </p>
             <BsChevronUp
               className={`${
                 open ? "rotate-180 transform" : ""

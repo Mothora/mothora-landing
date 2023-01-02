@@ -27,9 +27,9 @@ export default function Faq() {
       <div className="relative mt-20 flex flex-col items-center rounded-lg px-4 pb-44 animate-in fade-in slide-in-from-top-9 duration-700">
         <h1>FAQ</h1>
         <h2 className="mb-2 max-w-[900px] rounded-lg bg-black bg-opacity-80 px-4 py-4 text-center ">
-          Welcome to the FAQ page! Here, you'll find answers to some of the most
-          common questions. If you have a question that isn't answered here,
-          don't hesitate to ask the team for assistance.
+          Welcome to the FAQ page! Here, you{"'"}ll find answers to some of the
+          most common questions. If you have a question that isn{"'"}t answered
+          here, don{"'"}t hesitate to ask the team for assistance.
         </h2>
         <div
           className="h-full w-full max-w-[900px] overflow-hidden rounded-lg bg-black bg-opacity-40 px-8 py-4"

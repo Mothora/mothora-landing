@@ -91,10 +91,10 @@ const WelcomeSection = () => {
         <div className="flex flex-col justify-center lg:justify-start lg:text-left">
           <h2>Welcome to Mothora</h2>
           <p className="w-80 lg:w-[550px]">
-            Join the fight for dominance in Mothora, the epic Grand Strategy
-            First-Person Shooter Web3 game set in a dystopian sci-fi future.
-            Mothora is a Grand Strategy First-Person Shooter web3 game, players
-            can join DAOs to govern themselves and the outcome of the game.
+            Join the fight for dominance in Mothora, an epic Grand Strategy
+            First-Person Shooter Web3 game set in a dystopian sci-fi future. In
+            Mothora, players can join Decentralized Autonomous Organizations
+            (DAOs) to govern themselves and the outcome of the game.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 pt-4 lg:flex-row lg:justify-start">
             <a className="btn w-56 text-center" href="https://app.mothora.xyz">
@@ -191,8 +191,8 @@ const DAOSection = () => {
       </div>
 
       <p className="max-w-2xl text-center">
-        Become a member of a Decentralized Autonomous Organization (DAO) and
-        strategize your way to victory in Mothora's immersive and intense world.
+        Become a member of a DAO and strategize your way to victory in Mothora
+        {"'"}s immersive and intense world.
       </p>
 
       <SlideTransitionButton
@@ -234,7 +234,7 @@ const EssenceSection = () => {
               </span>
               <span className="essence font-extrabold">$ESSENCE </span>
               <span className="text-shadow">
-                and rise to the top of your DAO's governance ranks.
+                and rise to the top of your DAO{"'"}s governance ranks.
               </span>
             </p>
           </div>
