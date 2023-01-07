@@ -45,11 +45,13 @@ const HeroSection = () => {
             className="mx-auto flex cursor-pointer flex-col items-center"
             href="#welcome"
           >
-            <p className="text-shadow text-2xl font-bold">Scroll</p>
+            <p className="text-shadow font-[Poppins] text-2xl font-bold">
+              Scroll
+            </p>
             <BsChevronDown />
           </a>
         </div>
-        <h1 className="text-shadow text-center text-slate-200 animate-in fade-in slide-in-from-top-10 duration-700">
+        <h1 className="text-shadow text-center font-semibold text-slate-200 animate-in fade-in slide-in-from-top-10 duration-700">
           Immerse yourself in a Grand Strategy Sci-Fi Future.
         </h1>
         <div className="flex w-full justify-center ">
@@ -147,9 +149,7 @@ const DAOSection = () => {
           url("/images/walls-zoom.jpeg")`,
       }}
     >
-      <h2 className="text-shadow pt-14 text-center text-3xl md:pt-0">
-        Meet the DAOs
-      </h2>
+      <h2 className=" pt-14 text-center text-3xl md:pt-0">Meet the DAOs</h2>
       <p className="w-80 text-center lg:w-[600px]">
         DAOs allow for groups of like-minded players to govern themselves. These
         organizations of people can make proposals that influence how the game
@@ -228,12 +228,12 @@ const EssenceSection = () => {
           <div className="h-56 w-[270px] rounded-xl bg-black bg-opacity-70 px-4 pb-4 md:w-[350px] lg:h-48 lg:w-[400px]">
             <h2 className="essence text-center text-4xl">ESSENCE</h2>
             <p className="text-center text-sm font-bold md:max-w-3xl md:text-base">
-              <span className="text-shadow">
+              <span className="">
                 Earn and craft unique, soulbound non-fungible tokens (NFTs) as
                 you earn{" "}
               </span>
               <span className="essence font-extrabold">$ESSENCE </span>
-              <span className="text-shadow">
+              <span className="">
                 and rise to the top of your DAO{"'"}s governance ranks.
               </span>
             </p>
@@ -244,14 +244,14 @@ const EssenceSection = () => {
 
           {/* Second Card */}
           <div className="h-56 w-[270px] rounded-xl bg-black bg-opacity-70 px-4 pb-4 md:w-[350px] lg:h-48 lg:w-[400px]">
-            <h2 className="text-shadow text-center text-4xl font-bold">SRep</h2>
+            <h2 className="text-center text-4xl font-bold">SRep</h2>
             <p className="text-center text-sm font-bold md:max-w-3xl md:text-base">
-              <span className="text-shadow">
+              <span>
                 SRep represents the shares of ownership a player has on their
                 DAO during a season. It is obtained by locking{" "}
               </span>
               <span className="essence font-extrabold">$ESSENCE </span>
-              <span className="text-shadow">or NFTs.</span>
+              <span>or NFTs.</span>
             </p>
           </div>
         </div>
@@ -285,7 +285,7 @@ const SlideTransitionButton = ({
     return (
       <>
         <span className="ease absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center bg-mothora-hover text-white duration-300 group-hover:translate-x-0">
-          <span className="pr-2 text-black">{secondaryText}</span>
+          <span className="pr-2 font-semibold text-black">{secondaryText}</span>
           <svg
             className="h-6 w-6 text-black"
             fill="none"
@@ -301,7 +301,7 @@ const SlideTransitionButton = ({
             ></path>
           </svg>
         </span>
-        <span className="ease absolute flex h-full w-full transform items-center justify-center text-black transition-all duration-300 group-hover:translate-x-full">
+        <span className="ease absolute flex h-full w-full transform items-center justify-center font-semibold text-black transition-all duration-300 group-hover:translate-x-full">
           {text}
         </span>
         <span className="invisible relative">{text}</span>
