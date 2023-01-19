@@ -4,11 +4,11 @@ export default function Document() {
   return (
     <Html lang="en">
       <link
-        href="https://fonts.googleapis.com/css?family=Poppins&display=optional"
+        href="https://fonts.googleapis.com/css?family=Roboto"
         rel="stylesheet"
       ></link>
       <link
-        href="https://fonts.googleapis.com/css?family=Roboto&display=optional"
+        href="https://fonts.googleapis.com/css?family=Poppins&display=optional"
         rel="stylesheet"
       ></link>
       <Head />
