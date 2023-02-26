@@ -4,7 +4,11 @@ export default function Document() {
   return (
     <Html lang="en">
       <link
-        href="https://fonts.googleapis.com/css?family=Poppins&display=optional"
+        href="https://fonts.googleapis.com/css?family=Roboto"
+        rel="stylesheet"
+      ></link>
+      <link
+        href="https://fonts.googleapis.com/css?family=Poppins"
         rel="stylesheet"
       ></link>
       <Head />

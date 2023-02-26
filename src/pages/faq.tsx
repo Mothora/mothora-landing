@@ -37,11 +37,11 @@ export default function Faq() {
         >
           <DisclosureComp
             text="What is Mothora?"
-            answer="Mothora is a Grand Strategy First-Person Shooter web3 game set in a dystopian sci-fi future. Players belong to one of three DAOs and compete for map dominance, making economic and war decisions through a participatory process. The goal is to provide an intense and engaging experience with many players coordinating across time zones and displaying their allegiance to their DAO."
+            answer="Mothora is a Grand Strategy First-Person Shooter web3 game set in a dystopian sci-fi future. Players belong to one of three Alliances and compete for map dominance, making economic and war decisions through a participatory process. The goal is to provide an intense and engaging experience with many players coordinating across time zones and displaying their allegiance to their Alliances."
           />
           <DisclosureComp
             text="What is the goal of Mothora?"
-            answer="The goal of Mothora is for a DAO to have the highest collective SREP (Social Reputation) at the end of a game season. Players can earn SREP by locking $ESSENCE and NFTs in their DAO, which increases their governance power. To win the game, players need to be successful in both the tactical First Person Shooter gameplay and the Grand Strategy game."
+            answer="The goal of Mothora is for a Alliances to have the highest collective SREP (Social Reputation) at the end of a game season. Players can earn SREP by locking $ESSENCE and NFTs in their Alliance, which increases their governance power. To win the game, players need to be successful in both the tactical First Person Shooter gameplay and the Grand Strategy game."
           />
           <DisclosureComp
             text="Can I trade $ESSENCE or NFTs?"
@@ -49,7 +49,7 @@ export default function Faq() {
           />
           <DisclosureComp
             text="How do I get started with Mothora?"
-            answer="To get started, connect your wallet, link your Discord account, and join one of the three DAOs. You can then participate in missions and work with other players in your chosen guild."
+            answer="To get started, connect your wallet, link your Discord account, and join one of the three Alliances. You can then participate in missions and work with other players in your chosen guild."
           />
           <DisclosureComp
             text="What are the missions in Mothora's website?"
@@ -57,7 +57,7 @@ export default function Faq() {
           />
           <DisclosureComp
             text="What are the guilds in Mothora?"
-            answer="The guilds in Mothora are groups of players who come together to work on missions and achieve shared goals. There will be a guild module where 60 project ambassadors can create a guild, commit to a DAO, and invite their follow base to join. Ambassadors can apply in early 2023."
+            answer="The guilds in Mothora are groups of players who come together to work on missions and achieve shared goals. There will be a guild module where 60 project ambassadors can create a guild, commit to a Allinace, and invite their follow base to join. Ambassadors can apply in early 2023."
           />
           <DisclosureComp
             text="When will the Mothora web app be released?"

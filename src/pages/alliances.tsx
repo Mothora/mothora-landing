@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 
-export default function Daos() {
-  interface DAOSectionProps {
+export default function Alliances() {
+  interface AllianceSectionProps {
     image: string;
     imageLogo: string;
     color: string;
@@ -11,7 +11,7 @@ export default function Daos() {
     layout: "left" | "right";
     description: string;
   }
-  const DAOSection = ({
+  const AllianceSection = ({
     image,
     imageLogo,
     color,
@@ -19,7 +19,7 @@ export default function Daos() {
     link,
     layout,
     description,
-  }: DAOSectionProps) => {
+  }: AllianceSectionProps) => {
     return (
       <div
         className={`${color} group w-full scroll-m-24 rounded-xl border border-solid border-slate-700 bg-opacity-20 py-12 backdrop-blur-md animate-in fade-in md:px-12 md:py-8 slide-in-from-${
@@ -37,7 +37,7 @@ export default function Daos() {
             } `}
           >
             <Image
-              src={`/images/daos/${imageLogo}`}
+              src={`/images/alliances/${imageLogo}`}
               alt={name}
               width={150}
               height={150}
@@ -58,7 +58,7 @@ export default function Daos() {
   return (
     <>
       <Head>
-        <title>DAOs - Mothora</title>
+        <title>Alliances - Mothora</title>
       </Head>
       <div
         className="fixed h-screen w-full bg-cover bg-center bg-no-repeat animate-in fade-in duration-700"
@@ -76,14 +76,13 @@ export default function Daos() {
       <div className="relative pb-40">
         <div className="flex w-full flex-col items-center gap-4 px-2 pt-24 md:px-8">
           <div className="flex w-full flex-col items-center justify-center rounded-2xl bg-black bg-opacity-50 pb-4 text-center backdrop-blur-md animate-in fade-in slide-in-from-top-10 duration-700 md:px-6">
-            <h1 className="pb-0">The DAOs</h1>
-            <h2>Meet the 3 DAOs</h2>
+            <h1 className="pb-0">The Alliances</h1>
+            <h2>Meet the 3 Alliances</h2>
             <p className="px-2 pb-4">
-              Decentralized Autonomous Organizations, or DAOs, are a critical
-              part of Mothora. They allow for groups of like-minded players to
-              govern themselves. These organizations of people can make
-              proposals that influence how the game is meant to be played by
-              them, their strategies and how they are managed.
+              Alliances are a critical part of Mothora. They allow for groups of
+              like-minded players to govern themselves. These organizations of
+              people can make proposals that influence how the game is meant to
+              be played by them, their strategies and how they are managed.
             </p>
             <a
               className="btn text-center"
@@ -91,12 +90,12 @@ export default function Daos() {
               target="_blank"
               rel="noreferrer"
             >
-              Read More about DAOs
+              Read More about Alliances
             </a>
           </div>
 
-          <DAOSection
-            image="/images/daos/sc.jpeg"
+          <AllianceSection
+            image="/images/alliances/sc.jpeg"
             imageLogo="sc-logo.png"
             color="bg-blue-500"
             name="Shadow Council"
@@ -104,8 +103,8 @@ export default function Daos() {
             layout="left"
             description="Nimble as the wind, the Shadow Council operates underground in Mothora and resort to anything to get what they want. There is no going back once you're taken"
           />
-          <DAOSection
-            image="/images/daos/eh.jpeg"
+          <AllianceSection
+            image="/images/alliances/eh.jpeg"
             imageLogo="eh-logo.png"
             color="bg-purple-600"
             name="Eclipse Horizon"
@@ -113,14 +112,14 @@ export default function Daos() {
             layout="right"
             description="Explore the far reaches of Mothora with the Eclipse Horizon, a group of bounty hunters and adventurers. From discovering long-lost shrines to crafting specialized dune vehicles, their adventures are not to be missed."
           />
-          <DAOSection
-            image="/images/daos/fed.jpeg"
+          <AllianceSection
+            image="/images/alliances/fed.jpeg"
             imageLogo="fed-logo.png"
             color="bg-amber-800"
             name="The Federation"
             link="https://mothora.gitbook.io/mothora/set-and-setting/the-daos/the-federation"
             layout="left"
-            description="The Federation, a DAO of the elite, nobles, and cultists, seek balance and elegance in all they do. But their true goal is eternal life and the replication of consciousness. Will you serve them in their quest?"
+            description="The Federation, a Alliance of the elite, nobles, and cultists, seek balance and elegance in all they do. But their true goal is eternal life and the replication of consciousness. Will you serve them in their quest?"
           />
         </div>
       </div>
