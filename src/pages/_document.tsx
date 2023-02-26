@@ -8,7 +8,7 @@ export default function Document() {
         rel="stylesheet"
       ></link>
       <link
-        href="https://fonts.googleapis.com/css?family=Poppins&display=optional"
+        href="https://fonts.googleapis.com/css?family=Poppins"
         rel="stylesheet"
       ></link>
       <Head />

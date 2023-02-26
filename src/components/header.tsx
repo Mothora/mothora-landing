@@ -67,10 +67,10 @@ export default function Header() {
               </Link>
               <Link
                 className="btn btn-header"
-                href="/daos"
+                href="/alliances"
                 onClick={() => closeMenu()}
               >
-                <span>DAOs</span>
+                <span>Alliances</span>
               </Link>
 
               <Link
@@ -176,9 +176,9 @@ export default function Header() {
 
               <Link
                 className="btn btn-header animate-in fade-in slide-in-from-left-10 duration-300"
-                href="/daos"
+                href="/alliances"
               >
-                <span>DAOs</span>
+                <span>Alliances</span>
               </Link>
 
               <Link
