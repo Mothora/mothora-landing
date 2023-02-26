@@ -4,7 +4,7 @@
 
 @layer components {
   .btn {
-    @apply rounded-lg bg-mothora-primary py-3 px-5 font-normal text-gray-900 transition-colors hover:bg-mothora-hover;
+    @apply rounded-lg bg-mothora-primary py-3 px-5 font-semibold text-gray-900 transition-colors hover:bg-mothora-hover;
   }
 
   .btn-header {
@@ -52,15 +52,15 @@
   }
 
   h1 {
-    @apply py-4 text-4xl text-white;
+    @apply py-4 font-[Poppins] text-4xl text-white;
   }
 
   h2 {
-    @apply py-4 text-2xl text-white;
+    @apply py-4 font-[Poppins] text-2xl text-white;
   }
 
   h3 {
-    @apply py-4 text-xl text-white;
+    @apply py-4 font-[Poppins] text-xl text-white;
   }
 
   a {
@@ -77,25 +77,23 @@
 }
 
 @layer utilities {
-  @variants responsive {
-    .text-shadow {
-      text-shadow: 2px 2px 1px black;
-    }
-    .text-shadow-md {
-      text-shadow: 4px 4px 8px black;
-    }
-    .text-shadow-lg {
-      text-shadow: 15px 15px 30px black;
-    }
-    .text-shadow-none {
-      text-shadow: none;
-    }
+  .text-shadow {
+    text-shadow: 2px 2px 1px black;
+  }
+  .text-shadow-md {
+    text-shadow: 4px 4px 8px black;
+  }
+  .text-shadow-lg {
+    text-shadow: 15px 15px 30px black;
+  }
+  .text-shadow-none {
+    text-shadow: none;
   }
 }
 
 html,
 body {
-  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   padding: 0;
   margin: 0;
